@@ -19,12 +19,18 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FLOORPLAN_IMAGE_PORTRAIT" translatesAutoresizingMaskIntoConstraints="NO" id="Gk1-8e-5tu">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="radius" translatesAutoresizingMaskIntoConstraints="NO" id="avJ-F8-Gai">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="radius" translatesAutoresizingMaskIntoConstraints="NO" id="avJ-F8-Gai" misplaced="YES">
                                 <rect key="frame" x="6" y="7" width="62" height="62"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pin" translatesAutoresizingMaskIntoConstraints="NO" id="5yS-V7-hCw">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin" translatesAutoresizingMaskIntoConstraints="NO" id="5yS-V7-hCw" misplaced="YES">
                                 <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gps: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="120" y="27" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -32,12 +38,14 @@
                             <constraint firstAttribute="bottom" secondItem="Gk1-8e-5tu" secondAttribute="bottom" id="hUg-xj-j3X"/>
                             <constraint firstItem="Gk1-8e-5tu" firstAttribute="top" secondItem="JIg-XY-Nu0" secondAttribute="top" id="jKG-tp-kaQ"/>
                             <constraint firstItem="Gk1-8e-5tu" firstAttribute="leading" secondItem="JIg-XY-Nu0" secondAttribute="leading" id="pWb-Vu-ztm"/>
+                            <constraint id="4" firstItem="5yS-V7-hCw" firstAttribute="centerY" secondItem="avJ-F8-Gai" secondAttribute="centerY"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="Gk1-8e-5tu" id="5Dx-Mk-i07"/>
                         <outlet property="pinView" destination="5yS-V7-hCw" id="RQB-Ze-6Dq"/>
                         <outlet property="radiusView" destination="avJ-F8-Gai" id="FW6-82-6cM"/>
+                        <outlet property="gpsView" destination="3" id="name-outlet-3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -49,6 +57,7 @@
         <image name="FLOORPLAN_IMAGE_PORTRAIT" width="510" height="826"/>
         <image name="pin" width="150" height="150"/>
         <image name="radius" width="62" height="62"/>
+        <image name="FLOORPLAN_IMAGE_LANDSCAPE" width="826" height="510"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
