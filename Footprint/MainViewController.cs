@@ -20,6 +20,12 @@ namespace Footprint
 		[Outlet ("radiusView")]
 		UIImageView RadiusView { get; set; }
 
+		[Outlet ("latitudeView")]
+		UILabel LatitudeView { get; set; }
+
+		[Outlet ("longitudeView")]
+		UILabel LongitudeView { get; set; }
+
 		CLLocationManager locationManager;
 		Tuple<GeoAnchor, GeoAnchor> anchorPair;
 
@@ -148,6 +154,9 @@ namespace Footprint
 				// Move the pin and radius to the user's location
 				PinView.Center = scaledPoint;
 				RadiusView.Center = scaledPoint;
+				// Update latitude and longitude on screen.
+				LatitudeView.Text = location.Coordinate.Latitude.ToString();
+				LongitudeView.Text = location.Coordinate.Longitude.ToString();
 			});
 		}
 
