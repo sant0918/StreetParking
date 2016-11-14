@@ -52,12 +52,12 @@ namespace Footprint
 
 			// We setup a pair of anchors that will define how the floorplan image, maps to geographic co-ordinates
 			var anchor1 = new GeoAnchor {
-				LatitudeLongitude = new CLLocationCoordinate2D (37.770511, -122.465810),
+				LatitudeLongitude = new CLLocationCoordinate2D (40.761547, -73.964810),
 				Pixel = new CGPoint (12, 18)
 			};
 
 			var anchor2 = new GeoAnchor {
-				LatitudeLongitude = new CLLocationCoordinate2D (37.769125, -122.466356),
+				LatitudeLongitude = new CLLocationCoordinate2D (40.789125, -73.966356),
 				Pixel = new CGPoint (481, 815)
 			};
 

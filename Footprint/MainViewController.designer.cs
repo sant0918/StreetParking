@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 ﻿// WARNING
+=======
+// WARNING
+>>>>>>> Stashed changes
 //
 // This file has been generated automatically by Xamarin Studio from the outlets and
 // actions declared in your storyboard file.
@@ -16,6 +20,7 @@ namespace Footprint
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+<<<<<<< Updated upstream
         UIKit.UILabel latitudeView { get; set; }
 
         [Outlet]
@@ -24,11 +29,23 @@ namespace Footprint
 
         void ReleaseDesignerOutlets ()
         {
+=======
+        UIKit.UILabel gpsView { get; set; }
+
+        void ReleaseDesignerOutlets ()
+        {
+            if (gpsView != null) {
+                gpsView.Dispose ();
+                gpsView = null;
+            }
+
+>>>>>>> Stashed changes
             if (imageView != null) {
                 imageView.Dispose ();
                 imageView = null;
             }
 
+<<<<<<< Updated upstream
             if (latitudeView != null) {
                 latitudeView.Dispose ();
                 latitudeView = null;
@@ -39,6 +56,8 @@ namespace Footprint
                 longitudeView = null;
             }
 
+=======
+>>>>>>> Stashed changes
             if (pinView != null) {
                 pinView.Dispose ();
                 pinView = null;
