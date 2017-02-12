@@ -100,6 +100,7 @@ namespace Footprint
 
 		void StartTrackingLocation ()
 		{
+
 			CLAuthorizationStatus status = CLLocationManager.Status;
 			if (status == CLAuthorizationStatus.NotDetermined) {
 				locationManager.RequestWhenInUseAuthorization ();
